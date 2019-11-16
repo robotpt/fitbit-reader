@@ -1,6 +1,9 @@
 README
 ======
 
+[![Build Status](https://travis-ci.com/robotpt/fitbit-reader.svg?branch=master)](https://travis-ci.com/robotpt/fitbit-reader)
+[![Downloads](https://pepy.tech/badge/fitbit-reader)](https://pepy.tech/project/fitbit-reader)
+
 A way to access Fitbit daily and intraday steps data.
 See `example.py` for usage.
 
