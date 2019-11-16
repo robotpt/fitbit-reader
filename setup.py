@@ -25,6 +25,7 @@ REQUIRED = [
     'pandas',
     'fitbit',
     'cherrypy',
+    'robotpt_common_utils',
 ]
 
 # What packages are optional?
