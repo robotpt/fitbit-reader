@@ -13,10 +13,19 @@ from base64 import b64encode
 from fitbit.api import Fitbit
 from oauthlib.oauth2.rfc6749.errors import MismatchingStateError, MissingTokenError
 
+port = 8088 
+
+
+cherrypy.engine.stop()
+cherrypy.server.httpserver = None
+cherrypy.config.update({'server.socket_port': port})
+cherrypy.engine.start()
+
+
 
 class OAuth2Server:
     def __init__(self, client_id, client_secret,
-                 redirect_uri='http://127.0.0.1:8080/'):
+                 redirect_uri='http://127.0.0.1:%d/' % port):
         """ Initialize the FitbitOauth2Client """
         self.success_html = """
             <h1>You are now authorized to access the Fitbit API!</h1>
